@@ -2,27 +2,54 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sigurd Lerkerød Alnes - Postdoc in Neuroscience">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <meta name="description" content="Sigurd Lerkerød Alnes, Postdoctoral Researcher in Neuroscience focusing on how sensory information is processed across levels of consciousness.">
+    <meta name="keywords" content="Sigurd Lerkerød Alnes, neuroscience, EEG, auditory processing, hyperscanning, scalp EEG, intracranial EEG, Bern neuroscience, neural correlates of consciousness">
+    <meta name="author" content="Sigurd Lerkerød Alnes">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Sigurd Lerkerød Alnes - Neuroscientist">
+    <meta property="og:description" content="Postdoctoral researcher in neuroscience focusing on how sensory information is processed across levels of consciousness.">
+    <meta property="og:url" content="https://www.neuralnes.com">
+    <meta property="og:image" content="sigurd_alnes.jpg">
+    <meta property="profile:first_name" content="Sigurd">
+    <meta property="profile:last_name" content="Lerkerød Alnes">
+    <meta property="profile:gender" content="male">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sigurd Lerkerød Alnes - Neuroscientist">
+    <meta name="twitter:description" content="Postdoctoral researcher in neuroscience focusing on how sensory information is processed across levels of consciousness.">
+    <meta name="twitter:image" content="sigurd_alnes.jpg">
+    <meta name="twitter:site" content="@lerknes">
+
     <title>Sigurd Lerkerød Alnes</title>
+
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
         body {
-            font-family: "Courier New", Courier, monospace;
+            font-family: "Courier New", Courier, monospace, sans-serif;
             background-color: #ffffff;
             color: #000000;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
             text-align: left;
             font-size: 0.85em;
+            line-height: 1.2em;
         }
 
         header {
             margin-top: 50px;
             width: 95%;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         header p {
@@ -30,18 +57,24 @@
         }
 
         nav {
-            margin: 20px 0;
+            position: sticky;
+            top: 0;
+            background-color: #ffffff;
+            padding: 10px 0;
+            margin: 0;
             font-size: 1em;
-            width: 95%;
+            width: 100%;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
         }
 
         nav a {
             color: #000000;
             text-decoration: none;
-            margin: 0 4px;
+            margin: 0 10px;
         }
 
-        nav a:first-of-type {
+        nav a:first-child {
             margin-left: 0;
         }
 
@@ -49,19 +82,31 @@
             text-decoration: underline;
         }
 
+        nav #nav-container {
+            margin-left: auto;
+            margin-right: auto;
+            width: 95%;
+            max-width: 1000px;
+        }
+
         section {
             width: 95%;
-            padding: 15px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 30px;
         }
 
         section#publications {
             font-size: 0.75em;
+            line-height: 1em;
         }
 
         footer {
             margin-top: 50px;
             padding: 20px;
             font-size: 0.8em;
+            text-align: center;
         }
 
         img {
@@ -71,24 +116,101 @@
             border: 2px solid #000;
         }
 
-        a.download-link {
+        a.button-link {
+            display: inline-block;
             text-decoration: none;
             color: #000000;
+            background-color: #e0e0e0;
+            padding: 4px 12px;
+            border-radius: 5px;
             font-weight: bold;
+            margin: 5px 0;
         }
 
+        a.button-link:hover {
+            background-color: #b7b7b7;
+        }
+
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #000000;
+        }
+
+        .social-icons img {
+            width: 24px;
+            height: 24px;
+            vertical-align: middle;
+        }
+
+        .button-container {
+            margin-top: 0px;
+        }
+
+        section#publications .button-container {
+            display: inline;
+        }
+
+        ul {
+            padding: 0;
+        }
+
+        ul li {
+            display: block;
+            margin-top: 1em;
+        }
+
+        h3 {
+            margin-top: 2em;
+        }
+
+        a {
+            color: black;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        .social-icons a {
+            display: block;
+            float: left;
+            width: 2em;
+            height: 2em;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .social-icons a:first-child {
+            margin-left: 0;
+        }
+
+        .social-icons a:hover {
+            opacity: 0.7;
+        }
+
+        .social-icons a#github {
+            background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjU2cHgiIGhlaWdodD0iMjU2cHgiIHZpZXdCb3g9IjAgMCAyNTYgMjU2IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPHRpdGxlPk9jdGljb25zLW1hcmstZ2l0aHViPC90aXRsZT4KICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJPY3RpY29ucy1tYXJrLWdpdGh1YiIgZmlsbD0iIzAwMDAwMCI+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik0xMjgsMCBDNTcuMjgsMCAwLDU4LjcyODgzMTMgMCwxMzEuMjM3NjEyIEMwLDE4OS4zMTAyNTUgMzYuNjQsMjM4LjM2MDMxMyA4Ny41MiwyNTUuNzQ5Mjk2IEM5My45MiwyNTYuODk3NjI1IDk2LjMyLDI1Mi45NjA0OTcgOTYuMzIsMjQ5LjUxNTUxIEM5Ni4zMiwyNDYuMzk4NjE2IDk2LjE2LDIzNi4wNjM2NTQgOTYuMTYsMjI1LjA3MjUwNCBDNjQsMjMxLjE0MjI0NCA1NS42OCwyMTcuMDM0MjAxIDUzLjEyLDIwOS42NTIwODUgQzUxLjY4LDIwNS44NzkwMDQgNDUuNDQsMTk0LjIzMTY2NiA0MCwxOTEuMTE0NzcyIEMzNS41MiwxODguNjU0MDY3IDI5LjEyLDE4Mi41ODQzMjggMzkuODQsMTgyLjQyMDI4MSBDNDkuOTIsMTgyLjI1NjIzNCA1Ny4xMiwxOTEuOTM1MDA3IDU5LjUyLDE5NS44NzIxMzYgQzcxLjA0LDIxNS43MjE4MjUgODkuNDQsMjEwLjE0NDIyNiA5Ni44LDIwNi42OTkyMzkgQzk3LjkyLDE5OC4xNjg3OTQgMTAxLjI4LDE5Mi40MjcxNDggMTA0Ljk2LDE4OS4xNDYyMDggQzc2LjQ4LDE4NS44NjUyNjggNDYuNzIsMTc0LjU0NjAyNCA0Ni43MiwxMjQuMzQ3NjM3IEM0Ni43MiwxMTAuMDc1NTQ3IDUxLjY4LDk4LjI2NDE2MTkgNTkuODQsODkuMDc3NTI5MSBDNTguNTYsODUuNzk2NTg4OCA1NC4wOCw3Mi4zNDQ3MzM2IDYxLjEyLDU0LjI5OTU2MTkgQzYxLjEyLDU0LjI5OTU2MTkgNzEuODQsNTAuODU0NTc0NiA5Ni4zMiw2Ny43NTE0MTcxIEMxMDYuNTYsNjQuNzk4NTcwOSAxMTcuNDQsNjMuMzIyMTQ3NyAxMjguMzIsNjMuMzIyMTQ3NyBDMTM5LjIsNjMuMzIyMTQ3NyAxNTAuMDgsNjQuNzk4NTcwOSAxNjAuMzIsNjcuNzUxNDE3MSBDMTg0LjgsNTAuNjkwNTI3NiAxOTUuNTIsNTQuMjk5NTYxOSAxOTUuNTIsNTQuMjk5NTYxOSBDMjAyLjU2LDcyLjM0NDczMzYgMTk4LjA4LDg1Ljc5NjU4ODggMTk2LjgsODkuMDc3NTI5MSBDMjA0Ljk2LDk4LjI2NDE2MTkgMjA5LjkyLDEwOS45MTE1IDIwOS45MiwxMjQuMzQ3NjM3IEMyMDkuOTIsMTc0LjcxMDA3MSAxODAsMTg1Ljg2NTI2OCAxNTEuNTIsMTg5LjE0NjIwOCBDMTU2LjE2LDE5My4yNDczODQgMTYwLjE2LDIwMS4xMjE2NCAxNjAuMTYsMjEzLjQyNTE2NiBDMTYwLjE2LDIzMC45NzgxOTcgMTYwLDI0NS4wODYyNCAxNjAsMjQ5LjUxNTUxIEMxNjAsMjUyLjk2MDQ5NyAxNjIuNCwyNTcuMDYxNjcyIDE2OC44LDI1NS43NDkyOTYgQzIxOS4zNiwyMzguMzYwMzEzIDI1NiwxODkuMTQ2MjA4IDI1NiwxMzEuMjM3NjEyIEMyNTYsNTguNzI4ODMxMyAxOTguNzIsMCAxMjgsMCBaIiBpZD0iUGF0aCI+PC9wYXRoPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+")
+        }
+
+        .social-icons a#orcid {
+            background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjU2cHgiIGhlaWdodD0iMjU2cHgiIHZpZXdCb3g9IjAgMCAyNTYgMjU2IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPHRpdGxlPk9SQ0lEX2lEPC90aXRsZT4KICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJPUkNJRF9pRCIgZmlsbC1ydWxlPSJub256ZXJvIj4KICAgICAgICAgICAgPHBhdGggZD0iTTI1NiwxMjggQzI1NiwxOTguNyAxOTguNywyNTYgMTI4LDI1NiBDNTcuMywyNTYgMCwxOTguNyAwLDEyOCBDMCw1Ny4zIDU3LjMsMCAxMjgsMCBDMTk4LjcsMCAyNTYsNTcuMyAyNTYsMTI4IFoiIGlkPSJQYXRoIiBmaWxsPSIjMDAwMDAwIj48L3BhdGg+CiAgICAgICAgICAgIDxnIGlkPSJHcm91cCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNjguNSwgNDYuNykiIGZpbGw9IiNGRkZGRkYiPgogICAgICAgICAgICAgICAgPHBvbHlnb24gaWQ9IlBhdGgiIHBvaW50cz0iMTcuOCAxMzkuNSAyLjQgMTM5LjUgMi40IDMyLjQgMTcuOCAzMi40IDE3LjggODAuOCAxNy44IDEzOS41Ij48L3BvbHlnb24+CiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNNDAuNCwzMi40IEw4MiwzMi40IEMxMjEuNiwzMi40IDEzOSw2MC43IDEzOSw4NiBDMTM5LDExMy41IDExNy41LDEzOS42IDgyLjIsMTM5LjYgTDQwLjQsMTM5LjYgTDQwLjQsMzIuNCBMNDAuNCwzMi40IFogTTU1LjgsMTI1LjcgTDgwLjMsMTI1LjcgQzExNS4yLDEyNS43IDEyMy4yLDk5LjIgMTIzLjIsODYgQzEyMy4yLDY0LjUgMTA5LjUsNDYuMyA3OS41LDQ2LjMgTDU1LjgsNDYuMyBMNTUuOCwxMjUuNyBaIiBpZD0iU2hhcGUiPjwvcGF0aD4KICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0yMC4yLDEwLjEgQzIwLjIsMTUuNiAxNS43LDIwLjIgMTAuMSwyMC4yIEM0LjUsMjAuMiAxLjQyMTA4NTQ3ZS0xNCwxNS42IDEuNDIxMDg1NDdlLTE0LDEwLjEgQzEuNDIxMDg1NDdlLTE0LDQuNSA0LjUsMCAxMC4xLDAgQzE1LjcsMCAyMC4yLDQuNiAyMC4yLDEwLjEgWiIgaWQ9IlBhdGgiPjwvcGF0aD4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+")
+        }
+
+        .social-icons a#twitter {
+            background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjU2cHgiIGhlaWdodD0iMjU2cHgiIHZpZXdCb3g9IjAgMCAyNTYgMjU2IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPHRpdGxlPlhfaWNvbjwvdGl0bGU+CiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBpZD0iWF9pY29uIiBmaWxsPSIjMDAwMDAwIiBmaWxsLXJ1bGU9Im5vbnplcm8iPgogICAgICAgICAgICA8cGF0aCBkPSJNMTE0LjI0NDkyMywwLjcxMjYxNDI5MyBDNjkuMTM5ODM0OCw1LjQxODEzNzQgMjguODM3NjAzMSwzNS4xMDM5OTk0IDEwLjUxNjIyODQsNzcuMTEzMTk4NiBDLTEuMjkwNjUxNTMsMTA0LjIzNDEyMyAtMy4yNTU2MTIxMiwxMzUuNDYxNjg1IDUuMTI3OTkxNTEsMTY0LjIwOTg2NSBDMTUuNDgzNDAyMywyMDAuMDU1Njg0IDQyLjI3MDUzOTIsMjMwLjM0MDQzMSA3Ni45MzEyMTE2LDI0NS40ODcwODIgQzEwNC4wNjA2NzYsMjU3LjI5MDI0NSAxMzUuMjk4MDcyLDI1OS4yNTQ1ODcgMTY0LjA1NzAxNiwyNTAuODczNjIzIEMyMDcuMTAxMjkyLDIzOC40NjgxNTMgMjQwLjk5MzQzOSwyMDMuMTM3Mzc0IDI1Mi4xMTkwODcsMTU5LjI0NDI1NSBDMjY5LjQ4ODc5MSw5MC40NTk3NzMzIDIyNi44NzA3MTMsMjAuMTI4NDU4MiAxNTcuODkxNjk2LDMuNzA3MDM4MDkgQzE0Mi43NDAyNzUsMC4xMTM3Mjk1MzQgMTI5LjM5NjM0NCwtMC44MjkwODYxODggMTE0LjI0NDkyMywwLjcxMjYxNDI5MyBaIE0xMTUuOTU2NTYxLDgwLjE5MzE3NzQgQzEyNi45MDc2MjIsOTQuNzM3NTIxNiAxMzYuMTUzODkxLDEwNi43MTUyMTcgMTM2LjQ5NjIxOSwxMDYuNzE1MjE3IEMxMzYuODM4NTQ3LDEwNi43MTUyMTcgMTQ4LjIyNDM2NCw5NC43Mzc1MjE2IDE2MS42NTczLDgwLjE5MzE3NzQgTDE4Ni4yMTkzMDcsNTMuNjcxMTM4IEwyMDAuMTY5MTU4LDUzLjY3MTEzOCBMMTk3LjE3Mzc5MSw1Ni44NDAwOTQgQzE5NS40NjIxNTMsNTguNjI5OTAzOSAxODQuMzM2NTA1LDcwLjY5NDg2NTEgMTcyLjQ0MDYyLDgzLjYxNTM3NiBDMTYwLjU0NDczNSw5Ni41MzQxNzU4IDE0OC45MDU1OTYsMTA5LjEwNzMzNCAxNDYuNTkxNDYxLDExMS40MjA3NCBMMTQyLjQ4Njk1MywxMTUuNzg0MDQzIEwxNzQuNTgwMTY4LDE1OC40NzU5NzEgQzE5Mi4yMTAwNDEsMTgyLjAwMzU4NyAyMDYuNjczMzgzLDIwMS41MDY2OTcgMjA2LjY3MzM4MywyMDEuODU1NzYxIEMyMDYuNjczMzgzLDIwMi4yODM1MzYgMTk2LjE1MDIzMiwyMDIuNTM2Nzc4IDE4My4zOTE2ODEsMjAyLjUzNjc3OCBMMTYwLjAzMTI0NCwyMDIuNDUxMjIzIEwxMzguMjkzNDM5LDE3My4zNjI1MzUgQzEyMy4zMTY2MDUsMTUzLjI1NzExOCAxMTYuMjk4ODg5LDE0NC42MTA5MzMgMTE1LjYxNDIzNCwxNDUuMTI5Mzk2IEMxMTUuMTAwNzQyLDE0NS41NTcxNzEgMTAyLjk0NDY4OCwxNTguNjUwNTAzIDg4LjU3MDM1MSwxNzQuMjE4MDg1IEw2Mi40Njc4NjkzLDIwMi41MzY3NzggTDU1Ljg3NDYzOTIsMjAyLjUzNjc3OCBDNTIuMTk4MDQwNSwyMDIuNTM2Nzc4IDQ5LjIwMjY3MzcsMjAyLjM2MjI0NiA0OS4yMDI2NzM3LDIwMi4xMDkwMDMgQzQ5LjIwMjY3MzcsMjAxLjg1NTc2MSA2Mi44MTAxOTcsMTg2Ljk2MjM1MiA3OS40MDk2NjM3LDE2OS4wODQ3ODcgQzk1LjkzMjEwNjcsMTUxLjIwMzc5OSAxMDkuNjI1MjEyLDEzNi4yMzE2OCAxMDkuNzkxMjQxLDEzNS45Nzg0MzcgQzEwOS44ODAyNDYsMTM1LjYyOTM3MyA5Ni4yNzI3MjI3LDExNy4wNjczNjggNzkuNTg0MjUwOCw5NC43Mzc1MjE2IEM2Mi44OTU3Nzg5LDcyLjQ5MzIzMDUgNDkuMjAyNjczNyw1NC4wOTg5MTI5IDQ5LjIwMjY3MzcsNTMuOTI0MzgwNyBDNDkuMjAyNjczNyw1My43NTg0MDQxIDU5LjcyNTgyNSw1My42NzExMzggNzIuNjUyMTE2Myw1My42NzExMzggTDk2LjA5ODEzNTYsNTMuNjcxMTM4IEwxMTUuOTU2NTYxLDgwLjE5MzE3NzQgWiIgaWQ9IlNoYXBlIj48L3BhdGg+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik03MC4zNDQ4MjgxLDY1LjEzNTUwMzQgQzcwLjY4NTQ0NDEsNjUuNzM0Mzg4MiA5Mi4yNDY5NDk3LDk0LjY1MTk2NjYgMTE4LjA5NjEwOSwxMjkuMjEyNzUxIEwxNjUuMTY2MTU4LDE5Mi4xODI5MTYgTDE3NS42ODkzMDksMTkyLjI3MDE4MiBDMTgyLjE5NTI0NiwxOTIuMjcwMTgyIDE4Ni4xMzM3MjUsMTkxLjkyNzk2MyAxODUuOTU5MTM4LDE5MS40MTQ2MzMgQzE4NS44ODA0MDMsMTkwLjk4Njg1OCAxNjQuMzk3NjMyLDE2Mi4wNzI3MDIgMTM4LjM4MjQ0NCwxMjcuMjQ4NDA5IEw5MC45NjMyMjExLDYzLjkzNzczMzkgTDgwLjM1NDQ4NzksNjMuOTM3NzMzOSBDNzEuNTQyOTc0OCw2My45Mzc3MzM5IDY5Ljc0NDA0MzEsNjQuMTEyMjY2MSA3MC4zNDY1Mzk3LDY1LjEzNTUwMzQgTDcwLjM0NDgyODEsNjUuMTM1NTAzNCBaIiBpZD0iUGF0aCI+PC9wYXRoPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+")
+        }
+
+
+        /* Responsive adjustments */
         @media only screen and (min-width: 769px) {
             body {
                 font-size: 1em;
-            }
-
-            header, nav, section {
-                width: 80%;
-                max-width: 800px;
-            }
-
-            nav a {
-                margin: 0 15px;
             }
 
             section#publications {
@@ -97,10 +219,6 @@
         }
 
         @media only screen and (min-width: 1200px) {
-            header, nav, section {
-                max-width: 1000px;
-            }
-
             section#publications {
                 font-size: 1em;
             }
@@ -111,63 +229,107 @@
 
 <header>
     <h1>Sigurd Lerkerød Alnes</h1>
-    <p>Neuroscientist or something</p>
+    <p>Postdoctoral Researcher in Neuroscience</p>
 </header>
 
 <nav>
-    <a href="#about">About</a>
-    <a href="#research">Research</a>
-    <a href="#publications">Publications</a>
-    <a href="#cv">CV</a>
-    <a href="#contact">Contact</a>
+    <div id="nav-container">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#news">News</a>
+        <a href="#cv">CV</a>
+        <a href="#contact">Contact</a>
+    </div>
 </nav>
 
 <section id="about">
     <h2>About</h2>
     <p>
-        I am a postdoc using scalp and intracranial EEG to investigate how we process and integrate environmental information, from how representations of external stimuli are altered by brain state to how we established shared representations during communication.
+        I am a postdoctoral researcher in Neuroscience. I hold a master's degree in cognitive psychology from the University of Oslo and completed my PhD in neuroscience at the University of Bern, Switzerland. Currently, I am finishing up a short postdoctoral stay in Bern. My primary interest lies in understanding how conscious awareness alters sensory processing and how we form representations.
     </p>
 </section>
 
 <section id="research">
     <h2>Research</h2>
     <ul>
-        <li>Sleep and coma</li>
-        <li>Auditory Processing</li>
-        <li>Hyperscanning</li>
-        <li>Scalp EEG</li>
-        <li>Intracranial EEG</li>
+        <li>
+            <strong>Sleep and coma:</strong> Sensory processing when capacity for consciousness is lost or diminished.
+        </li>
+        <li>
+            <strong>Auditory processing:</strong> How processing of auditory stimuli manifest and is altered across states.
+        </li>
+        <li>
+            <strong>Hyperscanning:</strong> Neural correlates of the establishing of shared representations.
+        </li>
+        <li>
+            <strong>Scalp EEG:</strong> Used in my research with coma patients and for some cognitive experiments.
+        </li>
+        <li>
+            <strong>Intracranial EEG:</strong> Working with patients to understand basic mechanisms on a precise spatial scale.
+        </li>
     </ul>
 </section>
 
 <section id="publications">
-    <h2>Selected publications</h2>
-    <p>
-        <strong>Alnes, S. L.*</strong>, Aellen, F.*, ..., & Tzovara, A. Temporal dynamics of neural synchrony and complexity in the first and second day of coma. <i>Under review</i>.<br><br>
+    <h2>Selected Publications</h2>
+
+        van Maren, E., <strong>Alnes, S. L.</strong>, ..., & Baud, M. O. Feasibility, safety, and performance of full-head subscalp EEG using minimally invasive electrode implantation. <em>Neurology</em> (2024). DOI: <a href="https://doi.org/10.1212/WNL.0000000000209428" target="_blank">10.1212/WNL.0000000000209428</a>
+
+        <br><br>
+
+        <strong>Alnes, S. L.</strong>, Bächlin, L. Z. M., Schindler, K., & Tzovara, A. Neural complexity and the spectral slope characterise auditory processing in wakefulness and sleep. <em>European Journal of Neuroscience</em> (2023). DOI: <a href="https://doi.org/10.1111/ejn.16203" target="_blank">10.1111/ejn.16203</a>
         
-        van Maren, E., <strong>Alnes, S. L.</strong>, ..., & Baud, M. O. Feasibility, safety, and performance of full-head subscalp EEG using minimally invasive electrode implantation. <em>Neurology</em> (2024). DOI: <a href="https://doi.org/10.1212/WNL.0000000000209428">10.1212/WNL.0000000000209428</a><br><br>
+        <br><br>
 
-        <strong>Alnes, S. L.</strong>, Bächlin, L. Z. M., Schindler, K., & Tzovara, A. Neural complexity and the spectral slope characterise auditory processing in wakefulness and sleep. <em>European Journal of Neuroscience</em> (2023). DOI: <a href="https://doi.org/10.1111/ejn.16203">10.1111/ejn.16203</a><br><br>
+        Cusinato, R.*, <strong>Alnes, S. L.*</strong>, ..., & Tzovara, A. Intrinsic neural timescales in the temporal lobe support an auditory processing hierarchy. <em>Journal of Neuroscience</em> (2023). DOI: <a href="https://doi.org/10.1523/JNEUROSCI.1941-22.2023" target="_blank">10.1523/JNEUROSCI.1941-22.2023</a>
 
-        Cusinato, R.*, <strong>Alnes, S. L.*</strong>, ..., & Tzovara, A. Intrinsic neural timescales in the temporal lobe support an auditory processing hierarchy. <em>Journal of Neuroscience</em> (2023). DOI: <a href="https://doi.org/10.1523/JNEUROSCI.1941-22.2023">10.1523/JNEUROSCI.1941-22.2023</a><br><br>
+        <br><br>
 
-        Aellen, F., <strong>Alnes, S. L.</strong>, ..., & Tzovara, A. Auditory stimulation and deep learning predict awakening from coma after cardiac arrest. <em>Brain</em> (2022). DOI: <a href="https://doi.org/10.1093/brain/awac340">10.1093/brain/awac340</a><br><br>
+        <strong>Alnes, S. L.</strong>, De Lucia, M., Rossetti, A. O., & Tzovara, A. Complementary roles of neural synchrony and complexity for indexing consciousness and chances of surviving in acute coma. <em>NeuroImage</em> (2021). DOI: <a href="https://doi.org/10.1016/j.neuroimage.2021.118638" target="_blank">10.1016/j.neuroimage.2021.118638</a>
 
-        <strong>Alnes, S. L.</strong>, De Lucia, M., Rossetti, A. O., & Tzovara, A. Complementary roles of neural synchrony and complexity for indexing consciousness and chances of surviving in acute coma. <em>NeuroImage</em> (2021). DOI: <a href="https://doi.org/10.1016/j.neuroimage.2021.118638">10.1016/j.neuroimage.2021.118638</a><br><br>
 
         <em>* Shared first authorship</em><br><br>
 
-        <p>Full list of publications: <a href="https://scholar.google.com/citations?user=ECfihgYAAAAJ">Google Scholar</a>.</p>
+        <p>Full list of publications:</p>
+        <a href="https://scholar.google.com/citations?user=ECfihgYAAAAJ" class="button-link" target="_blank">Google Scholar</a>
     </p>
 </section>
 
+<!--
+<section id="news">
+    <h2>News and Updates</h2>
+    <p>Coming soon...</p>
+</section>
+-->
+
 <section id="cv">
-    <h2>CV</h2>
-    <p><a href="cv.pdf" class="download-link">Download CV</a></p>
+    <h2>Short Form CV</h2>
+    <h3>Academic Experience</h3>
+    <ul>
+        <li>Postdoctoral Researcher, University of Bern</li>
+        <li>PhD in Neuroscience, University of Bern</li>
+        <li>Master's in Cognitive Psychology, University of Oslo</li>
+    </ul>
+    <h3>Community Involvement</h3>
+    <ul>
+        <li>Committee member. Committee on improving HPC usability, University of Bern (2022)</li>
+        <li>Board Member. Department board, Department of Psychology, University of Oslo (2019)</li>
+        <li>Chairman of the Board. Student council, Department of Psychology, University of Oslo (2018)</li>
+    </ul>
+    <div class="button-container">
+        <a href="cv.pdf" class="button-link" download>Download Full CV</a>
+    </div>
 </section>
 
 <section id="contact">
     <h2>Contact</h2>
+    <div class="social-icons">
+        <a id="twitter" href="https://twitter.com/lerknes" target="_blank"></a>
+        <a id="github" href="https://github.com/slerknes" target="_blank"></a>
+        <a id="orcid" href="https://orcid.org/your_orcid_id" target="_blank"><img src="orcid_icon.svg" alt="Orcid Icon"></a>
+    </div>
+    <br><br>
     <p>Email: <a href="mailto:sigurd@neuralnes.com">sigurd@neuralnes.com</a></p>
 </section>
 
